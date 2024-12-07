@@ -1,196 +1,199 @@
-# Automotive-Analytics-Dashboard
+# NAGPUR WEATHER DATASET ANALYSIS 
 
-## DASHBOARD
-![Dashboard Screenshot 1](https://github.com/user-attachments/assets/1720b3eb-610d-4614-b7d3-8a972e79a3a8)
-![Dashboard Screenshot 2](https://github.com/user-attachments/assets/9c2fe9ae-9f75-4f7b-845e-1769633808b4)
-![Dashboard Screenshot 3](https://github.com/user-attachments/assets/94418c64-174b-4ffb-b882-f6702796194a)
-![Dashboard Screenshot 4](https://github.com/user-attachments/assets/fd7c3389-837f-4c8d-a370-857f0897709e)
+### OBJECTIVE OF THE DASHBOARD 
+The objective of the dashboard is to analyze and visualize seasonal weather patterns in Nagpur, focusing on key metrics like wind chill, temperature, and humidity.
 
-## QUESTIONS AND INTERPRETATIONS
+### INTRODUCTION
+The dataset includes weather data recorded over a specific period for Nagpur. Each entry includes the exact date and time of recording, capturing variations in meteorological parameters such as temperature, dew point, and humidity. This detailed timestamping allows for in-depth analysis of daily and seasonal weather patterns, helping to identify trends and anomalies over the observed period.
 
-Q1. What is the distribution of cars among different owner types?
+### DATASET: NAGPUR WEATHER DATASET
+ 
+![image](https://github.com/user-attachments/assets/c3e22a6e-4903-4f3a-9d3a-ae8737cb0be9)
 
-Interpretation:
+**Number of rows:** 10,497
 
-+ First-owner vehicles have the highest average selling price at ₹751,663, indicating that vehicles owned by the original buyer retain higher value.
-+ Second-owner vehicles show a significant drop in average price (₹415,127), followed by third-owner vehicles (₹315,969), and fourth-and-above-owner vehicles (₹227,529).
-+ This suggests a declining trend in value as the number of ownerships increases, likely due to perceived usage and wear.
+**Number of columns:** 19
 
-Q2. What is the trend in total kilometers driven for cars of different manufacturing years?
+### VARIABLE DESCRIPTION
 
-Interpretation:
+**1. month:** The month of the recorded data (string format).
 
-+ The bar chart reveals a trend in the number of cars driven over time, grouped by manufacturing year (2012–2020).
-+ There is higher activity or usage for cars manufactured in recent years (e.g., 2018–2020), as shown by their larger contribution to total "cars driven."
-+ Older cars (e.g., from 2012) show lower activity levels, possibly due to reduced use or removal from active circulation.
+**2. time:** The time of the recorded data (string format).
 
-Q3. Which fuel type has the highest average selling price?
+**3. day/night:** Indicates whether the data was recorded during the day or night (string format).
 
-Interpretation:
+**4. temperature:** The temperature in degrees Fahrenheit (integer format).
 
-+ The line chart demonstrates fluctuations in the average selling price over the course of the day in 30-minute intervals.
-+ Peaks occur at certain times, indicating potential high-demand or active selling windows where prices are higher.
-+ There is an observable dip around 17:00, suggesting reduced demand or activity during this interval.
+**5. condition:** The weather condition (e.g., Cloudy, Haze) (string format).
 
-Q4. WHich fuel type supports higher maximum power in cars?
+**6. dew_point:** The dew point temperature in degrees Fahrenheit (integer format).
 
-Interpretation:
+**7. heat_index:** The heat index in degrees Fahrenheit (integer format).
 
-+ Vehicles with manual transmission have a higher representation (79%) and an average selling price of ₹461,779.
-+ Automatic vehicles represent 21% of the data but have a higher average selling price of ₹176,3115.
-+ This indicates that while manual transmission vehicles are more common, automatic transmission cars are perceived as premium and command a higher price.
+**8. humidity_%:** The humidity percentage (integer format).
 
-Q5. How does the number of seats in a car impact its average selling price?
+**9. pressure:** The atmospheric pressure in inches of Mercury (Hg) (float format).
 
-Interpretation:
+**10. visibility:** The visibility in miles (float format).
 
-+ Vehicles using Diesel have the highest maximum power (671 units), indicating Diesel-powered vehicles are typically more powerful.
-+ Petrol vehicles rank second in terms of maximum power, with a value of 280 units.
-+ CNG and LPG vehicles have relatively low maximum power, with CNG at 258 units and LPG at 68.1 units.
-+ Diesel vehicles dominate in maximum power output, followed by Petrol, with alternative fuels like CNG and LPG being less powerful.
+**11. windchill:** The wind chill temperature in degrees Fahrenheit (integer format).
 
-Q6. Which are the Top 15 most fuel-efficient cars with mileage greater than 20 kmpl, and what are their fuel types?
+**12. Wind_direction:** The direction of the wind in degrees (integer format).
 
-Interpretation:
+**13. gust:** The wind gust speed in miles per hour (integer format).
 
-+ Manual transmission vehicles have a slightly higher average mileage (19.7) compared to Automatic transmission vehicles (17.6).
-+ Manual transmission vehicles are marginally more fuel-efficient than their automatic counterparts in this dataset.
+**14. wind_speed:** The wind speed in miles per hour (integer format).
 
-Q7. How does the average selling price vary between different transmission types?
+**15. uv_desc:** The description of the UV index (e.g., Low) (string format).
 
-Interpretation:
+**16. uv_index:** The UV index (integer format).
 
-+ Diesel vehicles lead with the highest average maximum power, slightly exceeding 100 units. Petrol and CNG vehicles follow, with average maximum power values around 80 and 60 units, respectively.
-+ LPG vehicles have the lowest average maximum power, well below 60 units.
-+ Diesel vehicles have both the highest maximum and average power, while LPG vehicles are consistently the least powerful.
+**17. clouds:** The cloud cover description (e.g., OVC - Overcast, SCT - Scattered) (string format).
 
-Q8. How has the manimum power of petrol cars evolved over the years?
+**18. rain:** A boolean indicating if it rained (True/False).
 
-Interpretation:
+**19. Rain_today:** A string indicating if it rained today (Yes/No).
 
-+ The majority (66%) of the vehicles are First Owner, suggesting they are primarily owned by their original buyers.
-+ Second Owner vehicles account for 26%, indicating a moderate share of used car ownership.
-+ Third Owner and Fourth & Above Owners collectively make up only 8% (6% and 2%, respectively).
-+ The dataset is dominated by vehicles owned by their first owners, reflecting a market skewed towards newer or single-owner cars.
+### GRAFANA DASHBOARD 
 
-Q9. How does the average selling price fluctuate over time in 30-minute intervals?
+https://github.com/user-attachments/assets/80d07c43-77e8-49a8-87f3-e6ef200033b4
 
-Interpretation:
+### CHARTS
 
-+ Vehicles with 9 seats have the highest average engine capacity (2447 units), followed by 10-seater vehicles (2315 units).
-+ Vehicles with 5, 6, and 7 seats have moderate average engine capacities, ranging from 1300 to 2082 units.
-+ Smaller vehicles, like those with 4 seats, have the lowest average engine capacity (1118 units).
-+ Engine capacity increases with the number of seats, suggesting larger vehicles (e.g., buses or vans) require more powerful engines.
+1. How does humidity change over time?
 
-Q10. How does the average mileage differ between individual sellers and dealers?
+**Humidity Trends Over Time**
+   
+<img width="614" alt="Screenshot 2024-12-06 at 10 27 22 AM" src="https://github.com/user-attachments/assets/dca8c3bf-eb41-4afb-8b6a-055f75129eda">
+   
+**Query:** _SELECT MEAN(HumidityPercentage) FROM data GROUP BY time(1m)_
+   
+**Observation:** Humidity levels fluctuate throughout the observed period but remain within a moderate range
+   
+**Insights:** The humidity trends chart for Nagpur shows significant fluctuations within the observed hour, with notable peaks around 23:00 and 23:10, indicating periods of increased moisture. The frequent variability suggests dynamic weather conditions, potentially influenced by evening cooling or local meteorological events. Overall, the chart highlights the rapid changes in humidity, which could correlate with other weather parameters for deeper analysis.
 
-Interpretation:
+2. How does the average heat index differ across various weather conditions?
 
-+ Vehicles owned by Fourth & Above Owners have the highest average kilometers driven (106,571), followed closely by Third Owner vehicles (101,066).
-+ Second Owner vehicles have an average of 94,788 kilometers, and First Owner vehicles have the lowest average (56,391).
-+ Vehicles pass through multiple owners as they accumulate higher mileage. Older or heavily used vehicles tend to be owned by later owners.
+**Average Heat Index by Weather Condition**
 
-Q11. How does the average mileage vary between manual and automatic transmission cars?
+<img width="632" alt="Screenshot 2024-12-06 at 10 41 11 AM" src="https://github.com/user-attachments/assets/f509d185-8018-484a-8c09-4dfafcbb1212">
 
-Interpretation:
+**Query:** _SELECT MEAN(HeatIndex) FROM data GROUP BY condition_
+   
+**Observation:** Cloudy conditions have an average heat index of 71.7, haze conditions rise to 86.3, and thunder conditions peak at 90.3, indicating increasing warmth and humidity.
 
-+ Vehicles using Diesel have the highest average selling price, significantly outpacing other fuel types.
-+ Petrol vehicles come second in average selling price but are much lower than Diesel vehicles.
-+ Vehicles running on CNG and LPG have the lowest average selling prices, with CNG slightly higher than LPG.
-+ Diesel vehicles retain higher resale value, likely due to their durability and efficiency, whereas alternative fuel vehicles like CNG and LPG have lower resale demand.
+**Insights:** Severe weather conditions, like Thunder, are linked to higher heat indices, while cloudy weather has the lowest heat index due to less sunlight and lower humidity.
 
+3. What is the average temperature when humidity percentage is greater than 40?
 
-Q12. How does the average maximum power vary across different fuel types?
+**Average Temperature Over Time**
+  
+<img width="627" alt="Screenshot 2024-12-06 at 11 06 06 AM" src="https://github.com/user-attachments/assets/395e7e1a-4296-464a-98f1-1ef76650b62e">
 
-Interpretation:
+**Query:** _SELECT MEAN(temperature) FROM data GROUP BY time(1m)_
+   
+**Observation:** The average temperature shows cyclical spikes, aligning with time periods during the day.
 
-+ The Skoda Rapid 1.5 TDI Ambition has the highest mileage (nearly 25 KMPL).
-+ Other cars like Hyundai i20 Sportz Diesel, Toyota Etios VXD, and Maruti Alto 800 LXi also feature prominently, with mileage consistently above 20 KMPL.
-+ Most cars in the list are diesel variants, indicating their dominance in fuel efficiency.
-+ Diesel cars continue to be the most fuel-efficient, making them a top choice for mileage-conscious buyers.
-+ Models such as the Skoda Rapid and Hyundai i20 set benchmarks for high mileage in the market.
+**Insights:** This chart reveals significant temperature fluctuations within the observed period. The temperature peaks, reaching over 100°F around 22:40 and 22:50, indicate periods of intense heat. Frequent dips to around 80°F suggest intermittent cooling, possibly due to changes in weather conditions such as wind or cloud cover. This pattern of rapid temperature changes highlights the dynamic nature of the local weather, with substantial variations occurring within short time intervals.
 
-Q13. How does the average number of kilometers driven vary between different owner types?
+4. How does average visibility vary across various cloud cover type?
+ 
+**Average visibility by cloud cover type**
 
-Interpretation:
+<img width="628" alt="Screenshot 2024-12-06 at 11 13 30 AM" src="https://github.com/user-attachments/assets/0c80632c-5b58-4a93-9607-e5df7e05f126">
 
-+ Cars from the late 1990s to early 2000s had maximum power outputs below 100 BHP.
-+ Post-2010, petrol cars saw a noticeable increase in power outputs, with newer models (e.g., 2015-2019) exceeding 150 BHP and even nearing 200 BHP.
-+ There is a clear upward trend in power capabilities as newer models are introduced.
-+ Advancements in engine technology have led to higher power outputs in recent years.
-+ Petrol cars are no longer just about efficiency but also offer enhanced performance, catering to a broader consumer base.
+**Query:** _SELECT MEAN(visibility) FROM data GROUP BY clouds_
+   
+**Observation:** Clear skies (CLR) have the highest visibility, while broken clouds (BKN) and others slightly reduce visibility.
+  
+**Insights:** This chart shows that few clouds offer the highest visibility at 2.80 miles, followed by clear skies at 2.78 miles. Scattered and overcast clouds provide moderate visibility at 2.56 and 2.67 miles, respectively, while broken clouds have the lowest visibility at 2.21 miles. Visibility decreases as cloud cover increases.
 
-Q14. How does the average selling price vary between different owner types?
+5.  Is there a correlation between wind speed and visibility?
 
-Interpretation:
+**Correlation Between Wind Speed and Visibility**
 
-+ Cars with a 7-seating capacity have the highest average selling price (~815k), reflecting their premium nature.
-+ Smaller cars, such as 2-seaters, are the least expensive (~300k).
-+ The selling price increases steadily with seating capacity, peaking for 7-seaters, while 6-seaters (~602k) and 5-seaters (~596k) fall in the mid-range.
-+ Larger cars, like 7-seaters (SUVs or MPVs), are positioned as premium offerings, appealing to buyers seeking utility and space.
-+ Compact cars are priced to cater to budget-friendly buyers.
+<img width="624" alt="Screenshot 2024-12-06 at 11 24 53 AM" src="https://github.com/user-attachments/assets/01dce4fc-9bec-4eb8-b1aa-03d368049acc">
 
+**Query:** _SELECT MEAN(WindSpeed), MEAN(visibility) FROM data GROUP BY time(1m)_
+   
+**Observation:** Wind speed directly affects visibility, with higher speeds generally enhancing it. Understanding this correlation can help predict visibility based on wind forecasts.
 
-Q15. How does the average engine capacity vary across different seat configurations?
+**Insights:** This chart shows that few clouds offer the highest visibility at 2.80 miles, followed by clear skies at 2.78 miles. Scattered and overcast clouds provide moderate visibility at 2.56 and 2.67 miles, respectively, while broken clouds have the lowest visibility at 2.21 miles. Visibility decreases as cloud cover increases.
 
-Interpretation:
+6. How does the heat index differ between day and night?
 
-+ The average mileage distribution is similar across seller types: Dealers: 34%, Individuals: 34%, Trustmark Dealers: 32%.
-+ No significant variation exists in mileage based on the seller type.
-+ Buyers can expect comparable mileage regardless of whether they purchase from dealers, individuals, or Trustmark-certified dealers. Seller type is not a key determinant of mileage performance.
+**Day vs Night Comparison of Heat Index**
 
-## MANAGERIAL IMPLICATIONS
+<img width="627" alt="Screenshot 2024-12-06 at 11 55 03 AM" src="https://github.com/user-attachments/assets/e698bcad-586b-4195-859a-050057882144">
 
-**Pricing Strategies:**
+**Query:** _SELECT MEAN(HeatIndex) FROM data GROUP BY DayNight_
+   
+**Observation:** The average heat index is higher during the day (91.0) and lower at night (82.9), indicating cooler nighttime temperatures.
 
-+ Vehicles with single ownership retain higher resale value, highlighting the need to target first-owner cars for acquisition or marketing. Dealerships and individual sellers can emphasize this feature to justify premium pricing.
-+ Diesel vehicles command higher average prices, reflecting their durability and efficiency. Marketing campaigns should underscore these attributes to appeal to long-term and high-mileage drivers.
-+ Cars with automatic transmissions, while fewer in number, are perceived as premium and fetch higher prices. Dealerships should actively promote these vehicles to affluent or urban consumers.
+**Insights:** The chart shows a clear difference in Nagpur's heat index, with daytime averaging 91.0°F and nighttime 82.9°F. This highlights significant cooling at night due to reduced solar radiation, impacting comfort levels and energy usage.
 
-**Consumer Insights:**
+7. What is the average dew point over time?
+   
+**Average dew point over time**
 
-+ Buyers prioritize vehicles with lower ownership history, higher mileage efficiency, and powerful engine capabilities, especially for diesel variants. Targeted promotions should communicate these features to align with consumer preferences.
-+ Recent models (2018–2020) are in higher demand, suggesting a shift toward newer vehicles. Dealers should invest in acquiring and advertising recent inventory.
+<img width="625" alt="Screenshot 2024-12-06 at 12 02 29 PM" src="https://github.com/user-attachments/assets/d3883e3f-5eb8-4e47-aef6-8e9baf67d3d0">
 
-**Product Portfolio Management:**
+**Query:** _SELECT MEAN("DewPoint") AS "avg_dew_point" FROM "data" GROUP BY time(1m)_
+   
+**Observation:** The dew point steadily increases over time, peaking during specific hours.
 
-+ Vehicles with higher seating capacities (e.g., 7-seaters) are seen as premium offerings, appealing to families and utility-focused buyers. This segment requires targeted promotion and competitive pricing.
-+ Fuel-efficient cars (above 20 kmpl), particularly diesel models, dominate the top-performing category. Focus on promoting these models to budget-conscious or environmentally aware consumers.
+**Insights:** The chart illustrates fluctuations in the average dew point over time. It shows a gradual increase from 22:40, peaking around 23:10, followed by a slight decline and variability thereafter. The peak values indicate higher moisture content in the air, suggesting a rise in humidity levels around that time. 
 
-**Operational Optimization:**
+8. What are the maximum and minimum temperatures recorded each month?
 
-+ Insights into the relationship between kilometers driven and ownership type can help dealerships optimize maintenance services and warranties for higher-owner-count vehicles, enhancing their resale appeal.
-+ Fuel type and engine power trends indicate diesel vehicles dominate in power and performance, providing direction for service packages and maintenance offers tailored for diesel vehicle owners.
+ **Maximum and minimum temperatures over time**
 
-**Market Positioning:**
+ <img width="614" alt="Screenshot 2024-12-06 at 12 02 47 PM" src="https://github.com/user-attachments/assets/a38edf4e-157b-48f1-b9be-1d06d581f50c">
 
-+ The dominance of manual transmission vehicles (79%) indicates their strong market presence. However, the premium positioning of automatic vehicles (21%) calls for differentiated marketing strategies to capture both market segments.
-+ Mileage performance across seller types is consistent, meaning sellers (dealers, individuals, Trustmark-certified) should compete on factors like pricing, certifications, and added services rather than mileage performance.
+ **Query:** _SELECT MAX("temperature") AS "max_temp", MIN("temperature") AS "min_temp" FROM "data" GROUP BY time(1m) FILL(null)_
+   
+**Observation:**  Significant fluctuation in max and min temperatures suggests high variability in weather conditions during the observed period.
 
-**Technological Trends:**
+**Insights:** The chart shows fluctuations in maximum and minimum temperatures over time. Maximum temperatures consistently peak above 100°F, while minimum temperatures range between 70°F and 90°F. The variations indicate significant thermal oscillations, likely driven by environmental and meteorological factors
 
-+ Engine power evolution in petrol vehicles shows a significant increase in recent years. Automotive brands can leverage this trend to position newer models as performance-oriented while maintaining fuel efficiency.
+9. What is the average UV index for each UV description category?
 
-**Sales Time Optimization:**
+**Average UV index by UV description**
 
-+ The fluctuation in selling price across time intervals suggests that sellers can optimize listings and promotions during peak demand periods to maximize returns. Analytical tools should be employed to identify and capitalize on these high-demand windows.
+<img width="629" alt="Screenshot 2024-12-06 at 12 15 01 PM" src="https://github.com/user-attachments/assets/226cb485-9f7d-4a8b-9521-6e7663dda233">
 
-**Sustainability and Innovation:**
+**Query:** _SELECT MAX(uvIndex) FROM data GROUP BY uvDesc_
+   
+**Observation:** UV index values are highest for "Extreme" and "Very High" categories, while "Low" levels are minimal.
 
-+ Lower resale values of CNG and LPG vehicles highlight potential gaps in market demand. Automotive manufacturers and marketers can explore consumer education campaigns or incentives to drive adoption of alternative fuel vehicles.
+**Insights:** The chart shows UV Index averages, with "Extreme" at 12.2, "Very High" at 9.07, and "High" at 6.61, posing significant risks. "Moderate" (3.87) and "Low" (0.294) indicate lower risks, highlighting the need for precautions during high UV levels in Nagpur.
 
-## CONCLUSION 
+10. What is the average Wind chill for each month?
+**Average Wind Chill by Month**
 
-The Automotive-Analytics dashboard provide valuable insights into the automotive resale market, empowering stakeholders to make data-driven decisions. By analyzing key variables such as ownership history, fuel type, transmission type, mileage, and seating capacity, the dashboard highlights critical trends in pricing, consumer preferences, and market dynamics.
+<img width="627" alt="Screenshot 2024-12-06 at 12 22 52 PM" src="https://github.com/user-attachments/assets/4b38a24d-77fd-4c00-bf3e-27c54c13e784">
 
-The analysis reveals that vehicles with fewer owners, higher fuel efficiency, and premium features such as automatic transmission or higher seating capacity command greater value in the resale market. Additionally, the dominance of diesel vehicles in both price and performance indicates their continued relevance, despite a growing interest in alternative fuels.
+**Query:** _SELECT MEAN(windchill) FROM data GROUP BY month_
+   
+**Observation:** Wind chill varies by month, with some months experiencing cooler conditions than others.
 
-The dashboard also underscores the importance of aligning inventory with consumer preferences, emphasizing newer models and vehicles with features that offer enhanced utility or performance. Furthermore, time-based trends in pricing provide actionable insights for optimizing sales strategies.
+**Insights:** The chart shows UV Index averages, with "Extreme" at 12.2, "Very High" at 9.07, and "High" at 6.61, posing significant risks. "Moderate" (3.87) and "Low" (0.294) indicate lower risks, highlighting the need for precautions during high UV levels in Nagpur, reflecting a seasonal warming trend as the months progress, which aligns with the transition from winter to spring. The rising wind chill values reflect increasing temperatures or decreasing wind speeds, contributing to less chilling conditions.
 
-Therefore this dashboard serves as a robust tool for dealerships, sellers, and manufacturers to understand market trends, refine their strategies, and cater effectively to diverse customer segments. By leveraging these insights, stakeholders can achieve higher profitability, operational efficiency, and customer satisfaction in a competitive automotive market.
+### MANAGERIAL IMPLICATION 
 
+**1. Weather-Dependent Operational Adjustments:** High variability in temperatures, dew point, and wind chill suggests the need for dynamic operational planning, especially for outdoor activities. For example, when the heat index is high, it's essential to implement safety measures like hydration and rest breaks for workers exposed to the elements.
 
+**2. Safety Protocols:** The UV index insights imply a need for stronger safety protocols during peak UV conditions. During "Extreme" and "Very High" UV index levels, protective measures such as sunscreen, hats, and shaded areas should be enforced to reduce the risk of sunburn and heat-related illnesses.
 
+**3. Transportation and Logistics:** The correlation between wind speed and visibility highlights the importance of adjusting transportation and logistics operations based on real-time weather data. Low visibility due to cloud cover or wind speed fluctuations could lead to delays or safety risks, requiring early forecasting and route optimization.
 
+**4. Seasonal Planning:** Seasonal variations in wind chill and temperature emphasize the need for tailored strategies across different months. For example, in colder months, heating and weatherproofing systems may need to be emphasized, while during warmer months, cooling solutions should be prioritized.
+
+**5. Energy Management:** The fluctuation in temperature and humidity levels calls for improved energy management practices. Cooling and heating systems should be optimized based on the time of day and seasonal changes, helping to reduce operational costs.
+
+**6. Weather-Driven Resource Allocation:** The trends in humidity and temperature suggest that resources, such as water, cooling units, and safety equipment, should be allocated based on real-time weather predictions to minimize downtime and optimize productivity.
+
+### CONCLUSION
+The dataset provides valuable insights into how various meteorological parameters impact daily operations and safety. Temperature, humidity, wind speed, UV index, and visibility all show distinct patterns that can be leveraged for more informed decision-making. By understanding the relationships between these factors, businesses can enhance safety, optimize resource usage, and improve operational efficiency. Seasonal trends and day-night variations should be considered in planning, while weather conditions like high heat, humidity, and low visibility necessitate adaptive strategies. By integrating these insights into day-to-day operations, organizations can mitigate risks and ensure smoother functioning across weather-impacted sectors.
 
 
